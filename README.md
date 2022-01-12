@@ -1,31 +1,63 @@
-# curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+# VetClinic Databas Optimization
+
+## About
+
+In this project, our goal was to perform a PostgreSQL Database Optimization using VetClinic Database, whose original scripts have been provided by Microverse.
+
+## Built With
+
+- SQL, PostgreSQL DB ;
+- VisualStudio Code, Git, & GitHub;
+
+## Pre-requisites
+
+- PostgreSQL
+- Git
+
+
 
 
 ## Getting Started
 
-This repository includes files with plain SQL that can be used to recreate a database:
+1. In your terminal, in the folder of your preference, type the following bash command to clone this repository:
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+```sh
+git clone git@github.com:JuliCarracedo/Database_Optimization.git
+```
+
+2. Now For the last step of the process, once you are already in PostgreSQL Shell, you just need to run the following commands to check the improved performance of the database:
+
+```sql
+vetclinic=# explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+vetclinic=# explain analyze SELECT * FROM visits where vet_id = 2;
+vetclinic=# explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
+```
+
+To leave PostgreSQL Shell environment, you can just run `\q` and hit `<ENTER>`.
 
 
 ## Authors
 
 👤 **Author1**
+- Ihedoro Fortunatus
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: (https://github.com/fortuneonyeka)
+- Twitter: (https://twitter.com/onyekafortune)
+- LinkedIn: (https://www.linkedin.com/in/fortunatus-ihedoro/)
 
 👤 **Author2**
+- Julian Carracedo
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: (https://github.com/JuliCarracedo)
+- Twitter: (https://twitter.com/CarracedoJulian)
+- LinkedIn: (https://www.linkedin.com/in/julian-carracedo-0b8518207/)
+  
+👤 **Author3**
+- Fondem Junior
+- GitHub: (https://github.com/Fondem-Jr)
+- Twitter: (https://twitter.com/OpportunistZeus)
+- LinkedIn: (https://www.linkedin.com/in/fondem-junior-57484744/)
 
 ## 🤝 Contributing
 
